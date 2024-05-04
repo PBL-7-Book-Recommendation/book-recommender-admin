@@ -1,13 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { authSlice, categoriesSlice, organizersSlice, tournamentsSlice } from '../reducers'
+import { authSlice } from '../reducers'
 import storage from 'redux-persist/lib/storage'
 import { persistReducer, persistStore } from 'redux-persist'
 
 const rootReducer = combineReducers({
-  auth: authSlice,
-  category: categoriesSlice,
-  organizer: organizersSlice,
-  tournament: tournamentsSlice
+  auth: authSlice
 })
 
 const persistConfig = {
